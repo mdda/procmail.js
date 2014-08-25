@@ -22,6 +22,10 @@ mkdir ~/Mail
 
 Test
 ----------
+
+The easiest way to capture a 'live' email is to do 'show original' within the drop-down box on the right-hand-side of gmail.  
+Simply save that raw text file as ```mail-example.txt``` and pipe it into ```procmail.js`` as follows : 
+
 ```
 cat mail-example.txt | node procmail.js 
 ```
