@@ -1,0 +1,19 @@
+# NB  : Save in ~/.procmailrc
+# and : chmod 600 ~/.procmailrc
+
+# See : http://www.galtham.org/procmail.html
+# See : http://userpages.umbc.edu/~ian/procmail.html
+
+PATH=/usr/bin:/usr/local/bin
+MAILDIR=$HOME/Mail
+PMDIR=$MAILDIR
+LOGFILE=$PMDIR/procmail.log
+LOGABSTRACT=no
+SHELL=/bin/bash
+
+:0
+* ^TOnode_process*
+| node ~/PATH-TO/procmail.js >> ~/Mail/ocr.log
+
+:0
+! DEFAULT_USER@example.com
