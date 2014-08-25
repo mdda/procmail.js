@@ -1,0 +1,6 @@
+## Snippet within /etc/postfix/virtual configuration file
+
+example.com                irrelevant
+node_process@example.com   username_with_procmail_enabled
+@example.com               DEFAULT_USER@example.com
+
