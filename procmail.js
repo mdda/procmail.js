@@ -1,11 +1,8 @@
-
-// npm install mailparser
-
-var fs = require('fs');
 var MailParser = require("mailparser").MailParser;
 var mailparser = new MailParser({
 //  debug:true
 });
+var fs = require('fs');
 
 // setup an event listener when the parsing finishes
 mailparser.on("end", function(mail_object){
