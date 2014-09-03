@@ -8,7 +8,7 @@ Enabling ```procmail``` email parsing is always a bit of a frustrating exercise,
 The attached actually work for mail sent to ```node_process@example.com```, using an 'off-the-shelf' $5/month Fedora linux VPS, 
 running ```postfix``` in its default configuration (using ```virtual-servers``` as the routing mechanism for multiple sites).
 
-I'll add more details, and an out-bound email portion, if anyone is interested.
+In addition, there's a version that includes a outgoing mail component, also proven to work on the same 'off-the-shelf' configuration.
 
 
 Install
@@ -30,3 +30,5 @@ Simply save that raw text file as ```mail-example.txt``` and pipe it into ```pro
 cat mail-example.txt | node procmail.js 
 ```
 
+The same incantation works for ```procmail_with_response.js`` - but it would make sense to check out the internals first 
+(particularly since your email provider may want the sending address to match the origin SMTP server).
